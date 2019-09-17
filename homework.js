@@ -2,7 +2,19 @@
 // member of the array, and returns a new array with that member removed.
 // For example, `remove(['Cadence', 'Ordel', 'Marion'], 'Marion')` results
 // in `['Cadence', 'Ordel']`.
-//
+
+function remove (people, name) {
+    let removedName = people.slice()
+    for (let i = 0; i < people.length; i++) {
+        if (people[i] === name) {
+            console.log(name)
+            removedName = removedName.splice(i) 
+            console.log(removedName)
+        } 
+    }
+    return removedName
+}   
+
 // If the potential member is not in the array, return the array unchanged.
 // If the potential member is in the array, remove all instances of it from the array.
 
@@ -12,8 +24,12 @@
 // 3. Create a function called "sum" that takes an array of numbers and
 // returns the sum of those numbers.
 
+// function sum 
+
 // 4. Create a function called "average" that takes an array of numbers
 // and returns the average of those numbers.
+
+// function average 
 
 // 5. Create a function called "minimum" that takes an array of numbers and
 // returns the smallest number in that array.
