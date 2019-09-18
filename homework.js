@@ -3,36 +3,41 @@
 // For example, `remove(['Cadence', 'Ordel', 'Marion'], 'Marion')` results
 // in `['Cadence', 'Ordel']`.
 
-function remove (people, name) {
-    let removedName = people.slice()
-    for (let i = 0; i < people.length; i++) {
-        if (people[i] === name) {
-            console.log(name)
-            removedName = removedName.splice(i) 
-            console.log(removedName)
-        } 
-    }
-    return removedName
-}   
-
 // If the potential member is not in the array, return the array unchanged.
 // If the potential member is in the array, remove all instances of it from the array.
+
+let array1 = []
+function remove(members, name) {
+    let array2 = array1.splice(name[i], 1)
+}
 
 // 2. Revisit your "remove" function. Make sure that it does not change the original
 // array but instead returns a new array.
 
+function remove () {
+    remove.splice = awesome
+    return awesome
+}
+
 // 3. Create a function called "sum" that takes an array of numbers and
 // returns the sum of those numbers.
 
-// function sum 
+function sum (newArray) {
+    let total
+    for (let i = 0; i < newArray.length; i++) {
+        return total 
+    }
+}
 
 // 4. Create a function called "average" that takes an array of numbers
 // and returns the average of those numbers.
 
-// function average 
+function average 
 
 // 5. Create a function called "minimum" that takes an array of numbers and
 // returns the smallest number in that array.
+
+function minimum 
 
 // 6. There are many techniques to sort arrays in programming. Your programming
 // language will likely include the ability to do this. We are going to
@@ -63,3 +68,7 @@ function remove (people, name) {
 //
 // For example, `textList(['Cadence', 'Ordel', 'Marion'])` results in the string
 // `"Cadence,Ordel,Marion"`.
+
+function textList (thisArray) {
+     return thisArray.join(", ")
+}
