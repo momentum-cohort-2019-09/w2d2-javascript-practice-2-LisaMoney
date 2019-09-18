@@ -6,9 +6,14 @@
 // If the potential member is not in the array, return the array unchanged.
 // If the potential member is in the array, remove all instances of it from the array.
 
-let array1 = []
-function remove(members, name) {
-    let array2 = array1.splice(name[i], 1)
+function remove(people, name) {
+    let newName = []
+    for (let i = 0, i < people.length; i++) {
+        if (people[i] !== name) {
+            newName.push(people[i])
+        }
+    }
+    return newName
 }
 
 // 2. Revisit your "remove" function. Make sure that it does not change the original
@@ -25,6 +30,7 @@ function remove () {
 function sum (newArray) {
     let total
     for (let i = 0; i < newArray.length; i++) {
+        total += newArray[i]
         return total 
     }
 }
@@ -37,7 +43,16 @@ function average
 // 5. Create a function called "minimum" that takes an array of numbers and
 // returns the smallest number in that array.
 
-function minimum 
+function minimum (array) {
+    let smallest
+
+    for (let item of array) {
+        if (smallest === undefined || smallest > item) {
+            smallest = item 
+        }
+    }
+    return smallest 
+}
 
 // 6. There are many techniques to sort arrays in programming. Your programming
 // language will likely include the ability to do this. We are going to
@@ -63,6 +78,27 @@ function minimum
 // https://courses.cs.vt.edu/csonline/Algorithms/Lessons/SelectionSort/index.html
 // to see how. This may make more sense to you.
 
+function removeOnce (array, itemToRemove) {
+    let idx = array.indexOf(itemToRemove)
+    if (idx !== -1) {
+        let arrayCopy = array.slice()
+        return arrayCopy.splice(idx, 1)
+    }
+    return array
+}
+
+function selectionSort (array) {
+    let arrayCopy = array.slice()
+    let sortedArray = []
+
+    while (arrayCopy.length > 0) {
+        let minVal = minimum(arrayCopy)
+        arrayCopy = removeOnce(arrayCopy, minVal)
+        sortedArray.push(minVal)
+    }
+    return sortedArray
+}
+
 // 7. Create a function called `textList` that takes an array and joins its elements
 // into a string separated by commas.
 //
@@ -71,4 +107,4 @@ function minimum
 
 function textList (thisArray) {
      return thisArray.join(", ")
-}
+} 
